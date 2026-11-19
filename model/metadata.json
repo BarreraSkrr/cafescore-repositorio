@@ -1,0 +1,404 @@
+{
+  "evento": "tener café",
+  "clase_positiva": 1,
+  "umbrales": [
+    0.23
+  ],
+  "decisiones": [
+    "No estudiar",
+    "Estudiar la zona"
+  ],
+  "metricas": {
+    "costo_modelo": 5940,
+    "costo_regla": 6100,
+    "regla_simple": "Estudiar la zona si tiene 51 comercios o más a 300 m",
+    "unidad_costo": "en millones de pesos (60 por zona con café descartada y 20 por zona sin café estudiada)",
+    "intervalo_diferencia": [
+      -380.0,
+      820.0
+    ],
+    "modelo": "Regresión logística",
+    "zonas_prueba": 732,
+    "zonas_prueba_con_cafe": 141,
+    "sensibilidad_modelo": 0.681,
+    "sensibilidad_regla": 0.681,
+    "precision_modelo": 0.372,
+    "precision_regla": 0.361,
+    "estudios_2_aptas_modelo": 5.4,
+    "estudios_2_aptas_regla": 5.5,
+    "ahorro_estudios": 3.0,
+    "intervalo_ahorro_estudios": [
+      -8.0,
+      14.0
+    ],
+    "factor_arriendo": 0.01625,
+    "arriendo_maximo": 12,
+    "radio_canibalizacion": 1000,
+    "separacion_minima": 500,
+    "margen_tienda": 15,
+    "regla_estudia_por_clase": {
+      "oportunidad": 196,
+      "en equilibrio": 756,
+      "saturada": 213,
+      "sin demanda": 308
+    },
+    "regla_descarta_por_clase": {
+      "oportunidad": 15,
+      "en equilibrio": 135,
+      "saturada": 39,
+      "sin demanda": 1613
+    },
+    "tabla_modelos": [
+      {
+        "Opción": "Regla simple",
+        "Costo (M)": 6100,
+        "IC 95 %": "[4140; 8220]",
+        "Sensibilidad": 0.681,
+        "Precisión": 0.361
+      },
+      {
+        "Opción": "Regresión logística",
+        "Costo (M)": 5940,
+        "IC 95 %": "[4080; 7880]",
+        "Sensibilidad": 0.681,
+        "Precisión": 0.372
+      },
+      {
+        "Opción": "Árbol de decisión",
+        "Costo (M)": 5920,
+        "IC 95 %": "[3980; 8020]",
+        "Sensibilidad": 0.574,
+        "Precisión": 0.411
+      },
+      {
+        "Opción": "Bosque aleatorio",
+        "Costo (M)": 5640,
+        "IC 95 %": "[3920; 7400]",
+        "Sensibilidad": 0.716,
+        "Precisión": 0.384
+      },
+      {
+        "Opción": "XGBoost",
+        "Costo (M)": 5920,
+        "IC 95 %": "[4039; 7880]",
+        "Sensibilidad": 0.695,
+        "Precisión": 0.37
+      }
+    ]
+  },
+  "columnas": [
+    {
+      "nombre": "n_manzanas",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 1.0,
+      "maximo": 75.0,
+      "referencia": 10.0,
+      "p10": 2.0,
+      "p90": 28.0
+    },
+    {
+      "nombre": "log_valor_suelo",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 9.441452092939569,
+      "maximo": 16.693865963364694,
+      "referencia": 14.880221294956703,
+      "p10": 13.584399208862896,
+      "p90": 15.308414654142423
+    },
+    {
+      "nombre": "ov_servicios_empresas_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 1025.0,
+      "referencia": 40.0,
+      "p10": 4.0,
+      "p90": 157.5999999999999
+    },
+    {
+      "nombre": "ov_comercio_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 1575.0,
+      "referencia": 44.0,
+      "p10": 4.0,
+      "p90": 139.0
+    },
+    {
+      "nombre": "ov_educacion_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 131.0,
+      "referencia": 9.0,
+      "p10": 1.0,
+      "p90": 24.59999999999991
+    },
+    {
+      "nombre": "ov_salud_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 398.0,
+      "referencia": 5.0,
+      "p10": 0.0,
+      "p90": 32.0
+    },
+    {
+      "nombre": "ov_belleza_estilo_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 226.0,
+      "referencia": 13.0,
+      "p10": 1.0,
+      "p90": 43.0
+    },
+    {
+      "nombre": "ov_hoteles_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 124.0,
+      "referencia": 2.0,
+      "p10": 0.0,
+      "p90": 11.0
+    },
+    {
+      "nombre": "ov_entretenimiento_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 113.0,
+      "referencia": 3.0,
+      "p10": 0.0,
+      "p90": 10.0
+    },
+    {
+      "nombre": "ov_deporte_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 69.0,
+      "referencia": 7.0,
+      "p10": 1.0,
+      "p90": 17.0
+    },
+    {
+      "nombre": "fsq_negocios_hist_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 3486.0,
+      "referencia": 79.0,
+      "p10": 7.0,
+      "p90": 459.5999999999999
+    },
+    {
+      "nombre": "fsq_oficinas_hist_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 1094.0,
+      "referencia": 21.0,
+      "p10": 1.0,
+      "p90": 149.0
+    },
+    {
+      "nombre": "osm_universidades_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 35.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    {
+      "nombre": "osm_colegios_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 19.0,
+      "referencia": 2.0,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    {
+      "nombre": "osm_oficinas_osm_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 96.0,
+      "referencia": 1.0,
+      "p10": 0.0,
+      "p90": 8.599999999999909
+    },
+    {
+      "nombre": "osm_bancos_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 29.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    {
+      "nombre": "osm_centros_comerciales_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 19.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    {
+      "nombre": "osm_hospitales_clinicas_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 23.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    {
+      "nombre": "osm_parques_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 48.0,
+      "referencia": 7.0,
+      "p10": 1.0,
+      "p90": 16.0
+    },
+    {
+      "nombre": "osm_paraderos_sitp_300m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 39.0,
+      "referencia": 7.0,
+      "p10": 1.0,
+      "p90": 18.0
+    },
+    {
+      "nombre": "dist_tm_m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 15.74487329349105,
+      "maximo": 10612.653274548304,
+      "referencia": 1279.6137686059217,
+      "p10": 345.4511717168354,
+      "p90": 3491.1068443911913
+    },
+    {
+      "nombre": "tm_a_500m",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 1.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    {
+      "nombre": "log_tm_flujo_mes",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 9.966603186850204,
+      "maximo": 14.449872767262566,
+      "referencia": 12.493587203952263,
+      "p10": 11.370924016772856,
+      "p90": 14.188105306673132
+    },
+    {
+      "nombre": "tipos_generadores",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 6.0,
+      "referencia": 2.0,
+      "p10": 1.0,
+      "p90": 5.0
+    },
+    {
+      "nombre": "oficinas_y_universidad",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 1.0,
+      "referencia": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    {
+      "nombre": "accesibilidad_tm",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 7.778974308931314e-09,
+      "maximo": 14.019498589462968,
+      "referencia": 0.21008455305911486,
+      "p10": 0.005356582319303083,
+      "p90": 1.4463126731817795
+    },
+    {
+      "nombre": "oficinas_x_tm",
+      "tipo": "numérica",
+      "permite_faltantes": false,
+      "minimo": 0.0,
+      "maximo": 332.9322781456776,
+      "referencia": 0.040714941331082506,
+      "p10": 0.0,
+      "p90": 5.542210276044036
+    }
+  ],
+  "etiquetas": {
+    "n_manzanas": "Manzanas en la zona",
+    "log_valor_suelo": "Valor del suelo (log)",
+    "ov_servicios_empresas_300m": "Servicios a empresas a 300 m",
+    "ov_comercio_300m": "Comercios a 300 m",
+    "ov_educacion_300m": "Negocios de educación a 300 m",
+    "ov_salud_300m": "Negocios de salud a 300 m",
+    "ov_belleza_estilo_300m": "Belleza y estilo a 300 m",
+    "ov_hoteles_300m": "Hoteles a 300 m",
+    "ov_entretenimiento_300m": "Entretenimiento a 300 m",
+    "ov_deporte_300m": "Deporte a 300 m",
+    "fsq_negocios_hist_300m": "Negocios históricos (Foursquare)",
+    "fsq_oficinas_hist_300m": "Oficinas históricas (Foursquare)",
+    "osm_universidades_300m": "Universidades a 300 m",
+    "osm_colegios_300m": "Colegios a 300 m",
+    "osm_oficinas_osm_300m": "Oficinas a 300 m",
+    "osm_bancos_300m": "Bancos a 300 m",
+    "osm_centros_comerciales_300m": "Centros comerciales a 300 m",
+    "osm_hospitales_clinicas_300m": "Hospitales y clínicas a 300 m",
+    "osm_parques_300m": "Parques a 300 m",
+    "osm_paraderos_sitp_300m": "Paraderos SITP a 300 m",
+    "dist_tm_m": "Distancia a TransMilenio (m)",
+    "tm_a_500m": "TransMilenio a menos de 500 m",
+    "log_tm_flujo_mes": "Validaciones de la estación (log)",
+    "negocios_total_300m": "Negocios en total a 300 m",
+    "diversidad_usos": "Diversidad de usos",
+    "tipos_generadores": "Tipos de generadores de demanda",
+    "oficinas_y_universidad": "Oficinas y universidad a la vez",
+    "accesibilidad_tm": "Accesibilidad a TransMilenio",
+    "oficinas_x_tm": "Oficinas cerca de TransMilenio con flujo",
+    "oficinas_fsq_x_tm": "Oficinas (Foursquare) cerca de TransMilenio",
+    "empresas_x_tm": "Servicios a empresas cerca de TransMilenio"
+  },
+  "columna_id": "h3",
+  "n_entrenamiento": 3275,
+  "versiones": {
+    "scikit-learn": "1.9.1",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "joblib": "1.6.0"
+  },
+  "python": "3.13",
+  "fecha_exportacion": "2026-11-18T18:08:54"
+}
